@@ -1,0 +1,30 @@
+.button {
+    display: inline-block;
+    background-color: var(--accent);
+    width: 270px;
+    height: 70px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 22px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@include tablet {
+    .button {
+        width: 250px;
+        height: 65px;
+        padding: 20px 20px;
+        font-size: 18px;
+    }
+}
+
+@include mobile {
+    .button {
+        width: 240px;
+        height: 60px;
+        padding: 19px 20px;
+        font-size: 16px;
+    }
+}

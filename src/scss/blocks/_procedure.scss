@@ -1,0 +1,207 @@
+.procedure {
+    margin-top: 130px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+
+    &__title--mobile {
+        display: none;
+    }
+
+    &__images {
+        width: 50%;
+        position: relative;
+    }
+
+    &__descr {
+        width: 50%;
+    }
+
+    &__img-hair {
+        position: absolute;
+        bottom: -125px;
+        right: 15px;
+    }
+
+    &__text {
+        line-height: 34px;
+        margin-top: 20px;
+        text-wrap: wrap;
+        letter-spacing: 0.2px;
+
+        &:first-of-type {
+            margin-top: 25px;
+        }
+    }
+
+    &__list {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+   &__item {
+        width: 170px;
+        text-align: center;
+        text-wrap: wrap;
+        letter-spacing: 0.2px;
+        line-height: 22px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-image: url(../../img/icons/tick.svg);
+        }
+   }
+
+   &__img-tool--mobile {
+    display: none;
+   }
+
+}
+
+@include tablet {
+    .procedure {
+        &__text br {
+            display: none;
+        }
+
+        &__text {
+            margin-top: 15px;
+            &:first-of-type {
+                margin-top: 20px;
+            }
+        }
+
+        &__img-hair {
+            top: 300px;
+            width: 50%;
+            right: -25px;
+        }
+    }
+}
+
+@include tablet-middle {
+    .procedure {
+        margin-top: 100px;
+        &__text {
+            line-height: 25px;
+            font-size: 16px;
+            margin-top: 10px;
+            &:first-of-type {
+                margin-top: 15px;
+            }
+        }
+
+        &__img-hair {
+            top: 250px;
+        }
+
+        &__item {
+            width: 130px;
+            font-size: 16px;
+
+            &::before {
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 30px;
+                background-image: url(../../img/icons/tick-small.svg);
+            }
+        }
+
+    }
+}
+
+@media (max-width: 800px) {
+    .procedure {
+        &__item {
+            width: 100px;
+            font-size: 14px;
+
+            &::before {
+                bottom: 120px;
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .procedure {
+        margin-top: 70px;
+        &__title--hidden {
+            display: none;
+        }
+
+        &__title--mobile {
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__images {
+            width: 100%;
+        }
+
+        &__descr {
+            width: 100%;
+        }
+
+        &__img-tool {
+            width: 768px;
+        }
+
+        &__img-hair {
+            width: 250px;
+            height: 250px;
+            top: 280px;
+            left: 400px;
+        }
+
+        &__img-tool {
+            display: none;
+        }
+
+        &__img-hair {
+            display: none;
+        }
+
+        &__img-tool--mobile {
+            display: block;
+        }
+
+        &__text {
+            text-wrap: pretty;
+            margin-top: 15px;
+            &:first-of-type {
+                margin-top: 20px;
+            }
+        }
+
+        &__list {
+            column-gap: 15px;
+        }
+
+        &__item {
+            width: auto;
+
+            &::before {
+                top: -45px;
+            }
+        }
+    }
+}

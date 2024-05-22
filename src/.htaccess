@@ -1,0 +1,14 @@
+<IfModule mod_expires.c>
+    # Включаем модуль mod_expires
+    ExpiresActive On
+
+    # Задаем время кэширования для различных типов файлов
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+
+    # Вариант для всех остальных файлов
+    ExpiresDefault "access plus 2 days"
+</IfModule>

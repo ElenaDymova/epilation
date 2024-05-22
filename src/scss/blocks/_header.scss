@@ -1,0 +1,53 @@
+.header {
+    padding-top: 30px;
+    background-color: var(--grey);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        width: 40px;
+        height: 40px;
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+}
+
+
+@include tablet {
+    .header {
+        &__item {
+            width: 35px;
+            height: 35px;
+            &:not(:first-child) {
+                margin-left: 25px;
+            }
+        }
+
+        &__logo {
+            width: 300px;
+            height: 55px;
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        &__item {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__logo {
+            width: 250px;
+            height: 40px;
+        }
+    }
+} 
