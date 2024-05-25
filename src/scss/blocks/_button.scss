@@ -9,6 +9,10 @@
     padding: 22px 20px;
     cursor: pointer;
     text-align: center;
+
+    &:hover {
+        background-color: #BE9F5F;
+    }
 }
 
 @include tablet {
@@ -26,5 +30,11 @@
         height: 60px;
         padding: 19px 20px;
         font-size: 16px;
+    }
+}
+
+@include mobile-small {
+    .button {
+        width: 200px;
     }
 }

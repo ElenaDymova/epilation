@@ -89,3 +89,24 @@
         }
     }
 } 
+
+@include mobile-small {
+    .master {
+        padding-bottom: 300px;
+        &__descr {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width:520px) {
+    .master {
+        padding-bottom: 400px;
+    }
+}
+
+@media (max-width:420px) {
+    .master {
+        padding-bottom: 500px;
+    }
+}

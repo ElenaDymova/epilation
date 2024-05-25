@@ -100,3 +100,23 @@
         }
     }
 }
+
+@include mobile-small {
+    .details {
+        &__container {
+            margin-top: 20px;
+        }
+
+        &__head {
+            font-size: 16px;
+        }
+
+        &__descr {
+            margin-top: 10px;
+
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+    }
+}

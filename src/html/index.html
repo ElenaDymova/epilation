@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Мастер электропиляции Екатерина</title>
 	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./css/swiper-bundle.css" />
 
 
 	<!-- Favicon .ico
@@ -24,19 +25,33 @@
 </head>
 
 
+
 <body>
-	<!-- @@include('blocks/header.html') -->
-	<main>
 		@@include('blocks/header.html')
+	<main>
 		@@include('blocks/hero.html')
 		@@include('blocks/procedure.html')
 		@@include('blocks/details.html')
 		@@include('blocks/slider.html')
 		@@include('blocks/master.html')
 		@@include('blocks/price.html')
-		@@include('blocks/footer.html')
 	</main>
-	<script src="./js/index.bundle.js"></script>
+		@@include('blocks/footer.html')
+	<script src="./js/swiper-bundle.js"></script>
+	<script>
+		const swiper = new Swiper('.swiper', {
+		// Optional parameters
+		loop: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+
+		});
+	</script>
 </body>
 
 </html>
