@@ -19,6 +19,14 @@
         }
     }
 
+    &__img--before {
+        border-top-left-radius: 100px;
+    }
+
+    &__img--after {
+        border-bottom-right-radius: 100px; 
+    }
+
     &__container {
         position: relative;
         width: 47%;
@@ -55,6 +63,14 @@
             }
         }
 
+        &__img--before {
+            border-top-left-radius: 80px;
+        }
+    
+        &__img--after {
+            border-bottom-right-radius: 80px; 
+        }
+
         &__button {
             padding-top: 100px;
         }
@@ -64,6 +80,7 @@
             width: 140px;
             height: 50px;
             line-height: 50px;
+            top: -23px;
         }
 
         &__container {
@@ -74,8 +91,17 @@
 
 @include mobile {
     .slider {
+        margin-top: 70px;
         &__button {
             padding-top: 85px;
+        }
+
+        &__img--before {
+            border-top-left-radius: 60px;
+        }
+    
+        &__img--after {
+            border-bottom-right-radius: 60px; 
         }
     }
 }
