@@ -4,6 +4,11 @@
     padding-top: 80px;
     padding-bottom: 80px;
 
+    background-image: url('../img/flower-bg-1.svg');
+    background-position: right center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+
     &__container {
         display: flex;
         align-items: stretch;
